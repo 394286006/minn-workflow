@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>p.minn</groupId>
+    <artifactId>minn-parent</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  <artifactId>minn-workflow</artifactId>
+  <version>0.0.1</version>
+  <name>minn-workflow</name>
+   <dependencies>
+		<dependency>
+			<groupId>p.minn</groupId>
+			<artifactId>minn-pojo-workflow</artifactId>
+			<version>0.0.1</version>
+		</dependency>   
+		<dependency>
+			<groupId>p.minn</groupId>
+			<artifactId>minn-cas-client</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>p.minn</groupId>
+			<artifactId>minn-common</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+   </dependencies>
+   <organization>
+   	<name>minn</name>
+   	<url>http://fmfl.iteye.com</url>
+   </organization>
+</project>
