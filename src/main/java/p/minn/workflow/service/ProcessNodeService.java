@@ -96,7 +96,7 @@ public class ProcessNodeService {
   public void delete(String messageBody) {
       // TODO Auto-generated method stub
       IdEntity idEntity=(IdEntity) UtilCommon.gson2T(messageBody,IdEntity.class);
-      globalizationDao.deleteByTableId(idEntity.getId().toString(),"wf_processnode");
+      globalizationDao.deleteByTableId(idEntity.getId(),"wf_processnode");
       dao.delete(idEntity);
   }
 

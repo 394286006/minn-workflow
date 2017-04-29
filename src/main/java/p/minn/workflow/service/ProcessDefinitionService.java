@@ -158,7 +158,7 @@ public class ProcessDefinitionService {
 	public void delete(String messageBody) {
 		// TODO Auto-generated method stub
 		Map<String,Object> condition=(Map<String, Object>) UtilCommon.gson2Map(messageBody);
-		globalizationDao.deleteByTableId(condition.get("id").toString(),"wf_processdefinition");
+		globalizationDao.deleteByTableId(Integer.valueOf(condition.get("id").toString()),"wf_processdefinition");
 		dao.delete(condition.get("id").toString());
 	}
 

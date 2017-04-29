@@ -134,6 +134,7 @@ public class WorkFlowService {
     if(status!=null)
       maxActive=status.getMaxActive();
     int num=dao.getNodeCompleteStatus(lpId, pdId);
+    System.out.println("getNodeCompleteStatus num:"+num+",lpId:"+lpId+",pdId:"+pdId);
     if(num==0){
       models=dao.getNextNode(lpId,pId,maxActive);
     }else{
@@ -187,6 +188,7 @@ public class WorkFlowService {
     int maxActive=status.getMaxActive();
     String temppdId=pdId;
     int num=dao.getPreNodeCompleteStatus(lpId, pdId,status.getId());
+    System.out.println("getpreNodeCompleteStatus num :"+num+",pId:"+pId+",pasId:"+status.getId()+",maxactive:"+status.getMaxActive()+",pdId:"+pdId);
     if(num==0){
       models=dao.getPreNode(pId,pdId);
       temppdId=models.get(0).get("pdId").toString();
@@ -212,7 +214,7 @@ public class WorkFlowService {
     for(int i=0;i<models.size();i++){
       Map<String,Object> model=models.get(i);
      if(i<stats){
-       processAuditStatusDao.updateMaxActiveBypdId(model.get("pdId").toString(),maxActive-1);
+       processAuditStatusDao.updateMaxActiveById(lpId,model.get("pdId").toString(),maxActive-1);
       String auditdate=UtilCommon.currentDateTime();
       processAuditStatus=new ProcessAuditStatus();
       processAuditStatus.setLpId(Integer.valueOf(lpId));
