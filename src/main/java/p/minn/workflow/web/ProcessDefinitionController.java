@@ -42,11 +42,23 @@ public class ProcessDefinitionController {
 		try {
 		  processDefinitionService.save(user,messageBody,lang);
 		} catch (Exception e) {
+			e.printStackTrace();
 			entity = new WebPrivilegeException(e.getMessage());
 		}
 		return entity;
 	}
 	
+	 @RequestMapping(params="method=getModel")
+	    public Object getModel(@RequestParam("messageBody") String messageBody,@MyParam("language") String lang){
+	        Object entity = null;
+	        try {
+	            entity=processDefinitionService.getModel(messageBody, lang);
+	         } catch (Exception e) {
+	                entity = new WebPrivilegeException(e.getMessage());
+	         }
+	        return entity;
+	    }
+	 
 	@RequestMapping(params = "method=del")
 	@ResponseBody
 	public Object delete(@RequestParam("messageBody") String messageBody) {
@@ -54,6 +66,7 @@ public class ProcessDefinitionController {
 		try {
 		  processDefinitionService.delete(messageBody);
 		} catch (Exception e) {
+			e.printStackTrace();
 			entity = new WebPrivilegeException(e.getMessage());
 		}
 		return entity;
