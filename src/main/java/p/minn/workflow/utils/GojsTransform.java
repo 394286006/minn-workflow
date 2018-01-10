@@ -40,7 +40,8 @@ public class GojsTransform {
 				pd.setId(pid+"_"+Double.valueOf(node.get("id").toString()).intValue());
 				pd.setPnId(Double.valueOf(node.get("id").toString()).intValue());
 				pd.setPId(pid);
-				pd.setSort(Integer.valueOf(node.get("sort").toString()));
+				pd.setSort(Double.valueOf(node.get("sort").toString()).intValue());
+				pd.setName(node.get("text").toString());
 				rs.add(pd);
 				paths.put(k, pd);
 			}
@@ -62,8 +63,13 @@ public class GojsTransform {
 			if(data.get("to").toString().equals("JS")||data.get("from").toString().equals("JS")) {
 				continue;
 			}
+			String tos[]=data.get("to").toString().split("@");
+			
 			if(data.get("to").toString().equals(nd)) {
 				String[] froms=data.get("from").toString().split("@");
+				if(tos[1].indexOf("N")==0&&froms[1].indexOf("N")==0) {
+					continue;
+				}
 				Map n=(Map) key.get(froms[1]);
 				ProcessDefinition pd=new ProcessDefinition();
 				pd.setCreateid(uid);
@@ -73,6 +79,7 @@ public class GojsTransform {
 				pd.setPnId(Double.valueOf(n.get("id").toString()).intValue());
 				pd.setPId(node.getId());
 				pd.setSort(Double.valueOf(n.get("sort").toString()).intValue());
+				pd.setName(n.get("text").toString());
 				rs.add(pd);
 				findPath(uid,datas,data.get("from").toString(),pd,rs,key);
 			}

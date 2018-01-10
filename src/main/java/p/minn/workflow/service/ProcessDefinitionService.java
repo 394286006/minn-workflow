@@ -93,7 +93,7 @@ public class ProcessDefinitionService {
 		ProcessDefinition pobj=null;
 		if(map.containsKey("modelExists")) {
 			List<ProcessDefinition> list=GojsTransform.transform(user.getId(),map.get("processId").toString(), map.get("model").toString());
-	        for(ProcessDefinition pd:list) {
+			for(ProcessDefinition pd:list) {
 	        	  dao.save(pd);
 	        }
 			saveModel(map);
@@ -193,8 +193,9 @@ public class ProcessDefinitionService {
 	public void delete(String messageBody) {
 		// TODO Auto-generated method stub
 		Map<String,Object> condition=(Map<String, Object>) UtilCommon.gson2Map(messageBody);
-		globalizationDao.deleteByTableId(Integer.valueOf(condition.get("gid").toString()),"wf_processdefinition");
+		globalizationDao.deleteByTableId(condition.get("id").toString(),"wf_processdefinition");
 		dao.delete(condition.get("id").toString());
+		modelDao.deleteByProcessId(condition.get("id").toString());
 	}
 
 

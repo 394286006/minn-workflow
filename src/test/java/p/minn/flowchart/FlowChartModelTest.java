@@ -22,32 +22,29 @@ public class FlowChartModelTest {
 		
 	}
 
-	@Test
+	//@Test
 	public void easyTest() {
 		String modealData="{ \"class\": \"go.GraphLinksModel\",\n" + 
 				"  \"linkFromPortIdProperty\": \"fromPort\",\n" + 
 				"  \"linkToPortIdProperty\": \"toPort\",\n" + 
-				"  \"modelData\": {\"position\":\"-25 -78\"},\n" + 
+				"  \"modelData\": {\"position\":\"15 124\"},\n" + 
 				"  \"nodeDataArray\": [ \n" + 
-				"{\"code\":\"D001\", \"children\":[], \"pid\":-1, \"id\":1, \"text\":\"人力资源部\", \"sort\":1, \"state\":{\"selected\":false}, \"rid\":1, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"1@D001@\", \"loc\":\"230 230\"},\n" + 
-				"{\"code\":\"D002\", \"children\":[], \"pid\":-1, \"id\":2, \"text\":\"软件部\", \"sort\":2, \"state\":{\"selected\":false}, \"rid\":2, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"2@D002@\", \"loc\":\"110 320\"},\n" + 
-				"{\"code\":\"D003\", \"children\":[], \"pid\":-1, \"id\":3, \"text\":\"财务部\", \"sort\":3, \"state\":{\"selected\":false}, \"rid\":3, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"3@D003@\", \"loc\":\"340 300\"},\n" + 
-				"{\"code\":\"D001\", \"children\":[], \"pid\":-1, \"id\":1, \"text\":\"人力资源部\", \"sort\":1, \"state\":{\"selected\":false}, \"rid\":1, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"1@D001@2\", \"loc\":\"240 410\"},\n" + 
-				"{\"code\":\"N006\", \"gid\":338, \"children\":[], \"pid\":-1, \"id\":7, \"sort\":\"6\", \"text\":\"请假环节\", \"state\":{\"selected\":false}, \"url\":\"node6\", \"selected\":false, \"key\":\"7@N006@\", \"loc\":\"220 130\"}\n" + 
+				"{\"code\":\"N006\", \"gid\":338, \"children\":[], \"pid\":-1, \"id\":7, \"sort\":\"6\", \"text\":\"请假环节\", \"state\":{\"selected\":false}, \"url\":\"node6\", \"selected\":false, \"key\":\"7@N006@\", \"loc\":\"170 170\"},\n" + 
+				"{\"code\":\"D001\", \"children\":[], \"pid\":-1, \"id\":1, \"text\":\"人力资源部\", \"sort\":1, \"state\":{\"selected\":false}, \"rid\":1, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"1@D001@\", \"loc\":\"220 260\"},\n" + 
+				"{\"code\":\"D003\", \"children\":[], \"pid\":-1, \"id\":3, \"text\":\"财务部\", \"sort\":3, \"state\":{\"selected\":false}, \"rid\":3, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"3@D003@\", \"loc\":\"220 350\"},\n" + 
+				"{\"code\":\"D001\", \"children\":[], \"pid\":-1, \"id\":1, \"text\":\"人力资源部\", \"sort\":1, \"state\":{\"selected\":false}, \"rid\":1, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"1@D001@2\", \"loc\":\"190 440\"}\n" + 
 				" ],\n" + 
 				"  \"linkDataArray\": [ \n" + 
-				"{\"from\":\"2@D002@\", \"to\":\"1@D001@\", \"fromPort\":\"\", \"toPort\":\"L\", \"points\":[110,303.0622756958008,110,293.0622756958008,110,229.99999999999997,142.17501449584955,229.99999999999997,174.35002899169913,229.99999999999997,184.35002899169913,229.99999999999997]},\n" + 
-				"{\"from\":\"3@D003@\", \"to\":\"1@D001@\", \"fromPort\":\"L\", \"toPort\":\"R\", \"points\":[309.01001739501953,300,299.01001739501953,300,292.3299942016601,300,292.3299942016601,229.99999999999997,285.64997100830067,229.99999999999997,275.64997100830067,229.99999999999997]},\n" + 
-				"{\"from\":\"1@D001@2\", \"to\":\"3@D003@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[240,393.0622756958008,240,383.0622756958008,240,355,340,355,340,326.9377243041992,340,316.9377243041992]},\n" + 
-				"{\"from\":\"1@D001@2\", \"to\":\"2@D002@\", \"fromPort\":\"L\", \"toPort\":\"\", \"points\":[194.35002899169922,410,184.35002899169922,410,110,410,110,378.46886215209963,110,346.9377243041992,110,336.9377243041992]},\n" + 
-				"{\"from\":\"1@D001@\", \"to\":\"7@N006@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[229.99999999999991,213.06227569580076,229.99999999999991,203.06227569580076,229.99999999999991,180,220,180,220,156.9377243041992,220,146.9377243041992]}\n" + 
+				"{\"from\":\"1@D001@2\", \"to\":\"3@D003@\", \"fromPort\":\"R\", \"toPort\":\"\", \"points\":[235.64997100830078,440,245.64997100830078,440,245.64997100830078,396,220,396,220,376.9377243041992,220,366.9377243041992]},\n" + 
+				"{\"from\":\"3@D003@\", \"to\":\"1@D001@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[220,333.0622756958008,220,323.0622756958008,220,305,220,305,220,286.9377243041992,220,276.9377243041992]},\n" + 
+				"{\"from\":\"1@D001@\", \"to\":\"7@N006@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[220,243.0622756958008,220,233.0622756958008,220,215,170,215,170,196.93772430419924,170,186.93772430419924]}\n" + 
 				" ]}";
 		
 		List<ProcessDefinition> rs=GojsTransform.transform(1,"108_1", modealData);
 		
 		System.out.println("insert size:"+rs.size());
 		for(ProcessDefinition pd:rs) {
-			System.out.println("pid:"+pd.getPId()+",id:"+pd.getId());
+			System.out.println("pid:"+pd.getPId()+",id:"+pd.getId()+",name:"+pd.getName());
 		}
 	}
 	
@@ -56,33 +53,29 @@ public class FlowChartModelTest {
 		String modealData="{ \"class\": \"go.GraphLinksModel\",\n" + 
 				"  \"linkFromPortIdProperty\": \"fromPort\",\n" + 
 				"  \"linkToPortIdProperty\": \"toPort\",\n" + 
-				"  \"modelData\": {\"position\":\"7.350028991699219 -99\"},\n" + 
+				"  \"modelData\": {\"position\":\"-5 -5\"},\n" + 
 				"  \"nodeDataArray\": [ \n" + 
-				"{\"code\":\"N003\", \"gid\":331, \"children\":[], \"pid\":-1, \"id\":4, \"sort\":\"3\", \"text\":\"环节3\", \"state\":{\"selected\":false}, \"url\":\"node3\", \"selected\":false, \"key\":\"4@N003@\", \"loc\":\"70 70\"},\n" + 
-				"{\"code\":\"D001\", \"children\":[], \"pid\":-1, \"id\":1, \"text\":\"人力资源部\", \"sort\":1, \"state\":{\"selected\":false}, \"rid\":1, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"1@D001@\", \"loc\":\"60 170\"},\n" + 
-				"{\"code\":\"D002\", \"children\":[], \"pid\":-1, \"id\":2, \"text\":\"软件部\", \"sort\":2, \"state\":{\"selected\":false}, \"rid\":2, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"2@D002@\", \"loc\":\"60 270\"},\n" + 
-				"{\"code\":\"N004\", \"gid\":332, \"children\":[], \"pid\":-1, \"id\":5, \"sort\":\"4\", \"text\":\"环节4\", \"state\":{\"selected\":false}, \"url\":\"mode4\", \"selected\":false, \"key\":\"5@N004@\", \"loc\":\"230 70\"},\n" + 
-				"{\"code\":\"D002\", \"children\":[], \"pid\":-1, \"id\":2, \"text\":\"软件部\", \"sort\":2, \"state\":{\"selected\":false}, \"rid\":2, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"2@D002@2\", \"loc\":\"200 160\"},\n" + 
-				"{\"code\":\"D003\", \"children\":[], \"pid\":-1, \"id\":3, \"text\":\"财务部\", \"sort\":3, \"state\":{\"selected\":false}, \"rid\":3, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"3@D003@\", \"loc\":\"220 260\"},\n" + 
-				"{\"code\":\"N005\", \"gid\":333, \"children\":[], \"pid\":-1, \"id\":6, \"sort\":\"5\", \"text\":\"环节5\", \"state\":{\"selected\":false}, \"url\":\"node5\", \"selected\":false, \"key\":\"6@N005@\", \"loc\":\"370 70\"},\n" + 
-				"{\"code\":\"D004\", \"children\":[], \"pid\":-1, \"id\":4, \"text\":\"商务部\", \"sort\":4, \"state\":{\"selected\":false}, \"rid\":4, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"4@D004@\", \"loc\":\"360 160\"},\n" + 
-				"{\"code\":\"D003\", \"children\":[], \"pid\":-1, \"id\":3, \"text\":\"财务部\", \"sort\":3, \"state\":{\"selected\":false}, \"rid\":3, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"3@D003@2\", \"loc\":\"360 240\"},\n" + 
-				"{\"code\":\"D001\", \"children\":[], \"pid\":-1, \"id\":1, \"text\":\"人力资源部\", \"sort\":1, \"state\":{\"selected\":false}, \"rid\":1, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"1@D001@2\", \"loc\":\"360 320\"}\n" + 
+				"{\"code\":\"N001\", \"gid\":328, \"children\":[], \"pid\":-1, \"id\":1, \"sort\":\"1\", \"text\":\"环节1\", \"state\":{\"selected\":false}, \"url\":\"node1\", \"selected\":false, \"key\":\"1@N001@\", \"loc\":\"130 140\"},\n" + 
+				"{\"code\":\"D001\", \"children\":[], \"pid\":-1, \"id\":1, \"text\":\"人力资源部\", \"sort\":1, \"state\":{\"selected\":false}, \"rid\":1, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"1@D001@\", \"loc\":\"140 230\"},\n" + 
+				"{\"code\":\"D003\", \"children\":[], \"pid\":-1, \"id\":3, \"text\":\"财务部\", \"sort\":3, \"state\":{\"selected\":false}, \"rid\":3, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"3@D003@\", \"loc\":\"130 310\"},\n" + 
+				"{\"code\":\"D001\", \"children\":[], \"pid\":-1, \"id\":1, \"text\":\"人力资源部\", \"sort\":1, \"state\":{\"selected\":false}, \"rid\":1, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"1@D001@2\", \"loc\":\"120 420\"},\n" + 
+				"{\"code\":\"N002\", \"gid\":329, \"children\":[], \"pid\":-1, \"id\":2, \"sort\":\"2\", \"text\":\"环节2\", \"state\":{\"selected\":false}, \"url\":\"node2\", \"selected\":false, \"key\":\"2@N002@\", \"loc\":\"390 140\"},\n" + 
+				"{\"code\":\"D003\", \"children\":[], \"pid\":-1, \"id\":3, \"text\":\"财务部\", \"sort\":3, \"state\":{\"selected\":false}, \"rid\":3, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"3@D003@2\", \"loc\":\"310 230\"},\n" + 
+				"{\"code\":\"D004\", \"children\":[], \"pid\":-1, \"id\":4, \"text\":\"商务部\", \"sort\":4, \"state\":{\"selected\":false}, \"rid\":4, \"rpid\":-1, \"type\":\"department\", \"selected\":false, \"key\":\"4@D004@\", \"loc\":\"390 340\"}\n" + 
 				" ],\n" + 
 				"  \"linkDataArray\": [ \n" + 
-				"{\"from\":\"2@D002@\", \"to\":\"1@D001@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[60,253.0622756958008,60,243.0622756958008,60,220,60,220,60,196.93772430419924,60,186.93772430419924]},\n" + 
-				"{\"from\":\"1@D001@\", \"to\":\"4@N003@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[60,153.0622756958008,60,143.0622756958008,60,120,70,120,70,96.93772430419921,70,86.93772430419921]},\n" + 
-				"{\"from\":\"2@D002@2\", \"to\":\"5@N004@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[200,143.0622756958008,200,133.0622756958008,200,115,230,115,230,96.93772430419921,230,86.93772430419921]},\n" + 
-				"{\"from\":\"3@D003@\", \"to\":\"2@D002@2\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[220,243.0622756958008,220,233.0622756958008,220,210,200,210,200,186.93772430419924,200,176.93772430419924]},\n" + 
-				"{\"from\":\"3@D003@2\", \"to\":\"4@D004@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[360,223.0622756958008,360,213.0622756958008,360,200,360,200,360,186.93772430419924,360,176.93772430419924]},\n" + 
-				"{\"from\":\"1@D001@2\", \"to\":\"3@D003@2\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[360,303.0622756958008,360,293.0622756958008,360,280,360,280,360,266.9377243041992,360,256.9377243041992]},\n" + 
-				"{\"from\":\"4@D004@\", \"to\":\"6@N005@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[360,143.0622756958008,360,133.0622756958008,360,115,370,115,370,96.93772430419921,370,86.93772430419921]}\n" + 
+				"{\"from\":\"1@D001@2\", \"to\":\"3@D003@\", \"fromPort\":\"R\", \"toPort\":\"\", \"points\":[165.64997100830078,420,175.64997100830078,420,175.64997100830078,366,130,366,130,336.9377243041992,130,326.9377243041992]},\n" + 
+				"{\"from\":\"3@D003@\", \"to\":\"1@D001@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[130,293.0622756958008,130,283.0622756958008,130,270,140,270,140,256.93772430419926,140,246.93772430419924]},\n" + 
+				"{\"from\":\"1@D001@\", \"to\":\"1@N001@\", \"fromPort\":\"\", \"toPort\":\"R\", \"points\":[140,213.0622756958008,140,203.0622756958008,140,184,167.73657989501953,184,167.73657989501953,140,157.73657989501953,140]},\n" + 
+				"{\"from\":\"4@D004@\", \"to\":\"3@D003@2\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[390,323.0622756958008,390,313.0622756958008,390,285,310,285,310,256.93772430419926,310,246.93772430419924]},\n" + 
+				"{\"from\":\"3@D003@2\", \"to\":\"2@N002@\", \"fromPort\":\"\", \"toPort\":\"\", \"points\":[310,213.0622756958008,310,203.0622756958008,310,185,390,185,390,166.9377243041992,390,156.9377243041992]},\n" + 
+				"{\"from\":\"1@N001@\", \"to\":\"2@N002@\", \"fromPort\":\"\", \"toPort\":\"L\", \"points\":[157.73657989501953,140,167.73657989501953,140,260,140,260,140,352.26342010498047,140,362.26342010498047,140]}\n" + 
 				" ]}";
 		List<ProcessDefinition> rs=GojsTransform.transform(1,"108_2", modealData);
 		
 		System.out.println("insert size:"+rs.size());
 		for(ProcessDefinition pd:rs) {
-			System.out.println("pid:"+pd.getPId()+",id:"+pd.getId());
+			System.out.println("pid:"+pd.getPId()+",id:"+pd.getId()+",code:"+pd.getCode()+",name:"+pd.getName());
 		}
 
 	}
