@@ -13,7 +13,7 @@ import p.minn.privilege.entity.Globalization;
 import p.minn.privilege.entity.IdEntity;
 import p.minn.privilege.repository.GlobalizationDao;
 import p.minn.common.utils.UtilCommon;
-import p.minn.security.cas.springsecurity.auth.User;
+import p.minn.oauth.vo.User;
 import p.minn.workflow.entity.ProcessNode;
 import p.minn.workflow.repository.ProcessNodeDao;
 

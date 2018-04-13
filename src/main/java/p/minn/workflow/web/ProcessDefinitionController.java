@@ -13,8 +13,8 @@ import org.springframework.web.servlet.LocaleResolver;
 
 import p.minn.common.annotation.MyParam;
 import p.minn.common.utils.ConstantCommon;
+import p.minn.oauth.vo.User;
 import p.minn.common.exception.WebPrivilegeException;
-import p.minn.security.cas.springsecurity.auth.User;
 import p.minn.workflow.service.ProcessDefinitionService;
 
 /**

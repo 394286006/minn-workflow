@@ -12,7 +12,7 @@ import p.minn.common.utils.MyGsonMap;
 import p.minn.privilege.entity.Globalization;
 import p.minn.privilege.repository.GlobalizationDao;
 import p.minn.common.utils.UtilCommon;
-import p.minn.security.cas.springsecurity.auth.User;
+import p.minn.oauth.vo.User;
 import p.minn.workflow.entity.ProcessNodeModel;
 import p.minn.workflow.repository.ProcessNodeModelDao;
 

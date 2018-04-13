@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import p.minn.common.utils.ConstantCommon;
 import p.minn.common.utils.MyGsonMap;
 import p.minn.common.utils.UtilCommon;
-import p.minn.security.cas.springsecurity.auth.User;
+import p.minn.oauth.vo.User;
 import p.minn.workflow.entity.ProcessAudit;
 import p.minn.workflow.entity.ProcessAuditStatus;
 import p.minn.workflow.repository.ProcessAuditDao;
