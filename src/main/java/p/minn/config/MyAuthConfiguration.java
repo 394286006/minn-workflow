@@ -13,7 +13,7 @@ import p.minn.oauth.filter.MyAuthFilter;
  * @QQ:3942986006
  * 
  */
-@Configuration
+//@Configuration
 public class MyAuthConfiguration {
 
 	@Bean
