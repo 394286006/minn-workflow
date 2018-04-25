@@ -17,10 +17,9 @@ import org.springframework.web.client.RestTemplate;
  */
 
 @SpringBootApplication
-//@EnableDiscoveryClient
-//@EnableEurekaClient
+@EnableDiscoveryClient
+@EnableEurekaClient
 @ImportResource({"classpath*:/spring/spring-mvc.xml"
-		//,"classpath*:/spring/applicationContext-privilege.xml"
 		,"classpath*:/spring/applicationContext-workflow.xml"
 		})
 public class WorkFlowApplication extends SpringBootServletInitializer{
